@@ -313,8 +313,8 @@ class FitBit(object):
                 time_index = time_index + 1        
 
     def parse_bank1_data(self, data):
-        for i in range(0, len(data), 14):
-            print ["0x%.02x" % x for x in data[i:i+13]]
+        for i in range(0, len(data), 16):
+            print ["0x%.02x" % x for x in data[i:i+15]]
             # First 4 bytes are seconds from Jan 1, 1970
             daily_steps = data[i+7] << 8 | data[i+6]
             record_date = datetime.datetime.fromtimestamp(data[i] | data[i + 1] << 8 | data[i + 2] << 16 | data[i + 3] << 24)
