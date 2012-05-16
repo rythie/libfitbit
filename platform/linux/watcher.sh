@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# A script to start libfitbit when the device is connected and restart it if it crashes
+
 LIBFITBITPATH="/root/libfitbit";
  
 while [ true ]
